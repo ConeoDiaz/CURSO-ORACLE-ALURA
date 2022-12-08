@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<h1>PRACTICA CALCULAR IMC </h1>
+
+<script>
+
+
+    function saltoDeLinea() { 
+        document.write("<br>"); 
+        document.write("<br>"); 
+        document.write("<br>"); 
+        
+        
+    }
+
+
+//Funcion imprimir con un parametro de entrada llamado FRASE
+    function imprimir(frase){
+        
+        
+        
+        //llamo dentro de la funcion imprimir, la funcion Salto de linea
+        //---> Para limpiar mas el codigo
+        document.write(frase);
+        saltoDeLinea();
+    }
+
+    //Procedimos a crear una funcion para sustituir la forma de calcular
+    //--> y hacer mas eficiente el codigo
+    function calcularImc(peso,altura){
+        
+        imc = peso / (altura * altura);
+        return(imc);
+    }
+
+    // PESO CARLOS (DATOS)
+    pesoCarlos = 72;
+    alturaCarlos = 1.76;
+
+    //Calculo IMC 
+    imcCarlos = calcularImc(pesoCarlos,alturaCarlos)
+
+    imprimir ("El indice de masa corporal de carlos es:" + Math.round(imcCarlos));
+    
+    pesoSara = 68;
+    alturaSara = 1.50; 
+    imcSara = calcularImc(pesoSara,alturaSara)
+
+    imprimir ("El indice de masa corporal de sara es:" + Math.round(imcSara));
+
+    </script>

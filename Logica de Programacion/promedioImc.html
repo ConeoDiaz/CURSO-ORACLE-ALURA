@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<h1>PRACTICA PROMEDIO IMC </h1>
+
+<script>
+
+
+    function saltoDeLinea() { 
+        document.write("<br>"); 
+        document.write("<br>"); 
+        document.write("<br>"); 
+        
+        
+    }
+
+
+//Funcion imprimir con un parametro de entrada llamado texto
+    function imprimir(texto) {
+        
+        
+        
+        //llamo dentro de la funcion imprimir, la funcion Salto de linea
+        //---> Para limpiar y hacer  mas eficiente el codigo
+        document.write(texto);
+        saltoDeLinea();
+    }
+
+    //Procedimos simple para crear una funcion y simplificar la forma de calcular
+    //--> y hacer mas eficiente el codigo
+    function calcularImc(peso,altura){
+
+        
+        return (peso / (altura * altura)); 
+        
+    }
+    
+
+
+    imprimir("El promedio del calculo de imc carlos y sara es: " + (calcularImc (76,1.76) + 
+    calcularImc (68,1.58))/2);
+       
+
+
+    </script>
