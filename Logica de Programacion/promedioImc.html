@@ -20,7 +20,7 @@
         
         
         //llamo dentro de la funcion imprimir, la funcion Salto de linea
-        //---> Para limpiar y hacer  mas eficiente el codigo
+        //---> limpiar y hacer  mas eficiente el codigo
         document.write(texto);
         saltoDeLinea();
     }
@@ -32,12 +32,19 @@
         
         return (peso / (altura * altura)); 
         
-    }
+    } 
+
+    nombre = prompt ("informe su nombre")
+    pesoInformado = prompt(nombre + ", Informe su peso: ")
+    alturaInformado = prompt(nombre + ", Informe su altura:")
+
+    imcCalculado= calcularImc(pesoInformado,alturaInformado)
+
     
 
 
-    imprimir("El promedio del calculo de imc carlos y sara es: " + (calcularImc (76,1.76) + 
-    calcularImc (68,1.58))/2);
+    imprimir(nombre + ", Su IMC calculado es: " + imcCalculado);
+
        
 
 
