@@ -34,9 +34,9 @@
         
     } 
 
-    nombre = prompt ("informe su nombre")
-    pesoInformado = prompt(nombre + ", Informe su peso: ")
-    alturaInformado = prompt(nombre + ", Informe su altura:")
+    nombre = prompt ("informe su nombre");
+    pesoInformado = prompt(nombre + ", Informe su peso: ");
+    alturaInformado = prompt(nombre + ", Informe su altura:");
 
     imcCalculado= calcularImc(pesoInformado,alturaInformado)
 
@@ -46,6 +46,28 @@
     imprimir(nombre + ", Su IMC calculado es: " + imcCalculado);
 
        
+    if (imcCalculado <18.5) {
+        imprimir("IMC Abajo de lo recomendado ");
+    }
+    if (imcCalculado >= 18.5) {
 
+        if (imcCalculado < 25) {
+            imprimir("IMC esta dentro del intervalo normal");
+
+            }
+        }
+
+        if (imcCalculado >= 25) {
+            if (imcCalculado < 30) {
+                imprimir("IMC considerado como sobrepeso");
+
+    }
+}
+        
+    
+    if (imcCalculado >=30) {
+        imprimir("IMC Considerador como obesidad  ");
+
+    }
 
     </script>

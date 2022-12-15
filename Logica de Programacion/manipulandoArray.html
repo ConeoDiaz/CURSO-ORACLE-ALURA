@@ -1,0 +1,78 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Verifica si acertaste con el secreto </button>
+
+
+<script>
+    function aleatorio() {
+        return Math.round(Math.random()*10);
+    }
+    
+    function cantNumerosAleatorios(cantidad){
+        var secretos =[];
+        var contador =1;
+        while(contador<=cantidad){
+           var numAleatorio =aleatorio();
+           var encontrado =false;
+
+           if(numAleatorio !=0){
+            for (var posicion =0; posicion < secretos.length; posicion ++) {
+            if (numAleatorio == secretos[posicion]) {
+                encontrado = true;
+                break;
+
+    
+            }
+          }  
+
+          if (encontrado ==false){
+            secretos.push(numAleatorio);
+            contador++;
+          }
+
+        }  
+
+            
+        }
+
+        return secretos
+
+        
+    }
+  
+    var secretos = cantNumerosAleatorios(4);
+
+    
+
+
+    var input = document.querySelector("input");
+    input.value="";
+    input.focus();
+
+    function Verifica(){
+
+        var encontrado =false;
+        for(var posicion =0; posicion < secretos.length; posicion++){
+            if (parseInt(input.value)==secretos[posicion]){
+                alert("usted acertó"); 
+                encontrado =true;
+                break;
+        }
+        
+        
+
+    }
+    if (encontrado ==false) {
+        alert("usted erró"); 
+    }
+    
+}
+
+    
+
+var button = document.querySelector("button");
+button.onclick = Verifica;
+
+    
+</script>
