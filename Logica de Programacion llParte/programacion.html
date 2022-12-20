@@ -1,0 +1,45 @@
+
+
+<canvas width="600" height="500">
+
+
+</canvas>
+
+
+<script>
+var pantalla = document.querySelector("canvas");
+var pincel = pantalla.getContext("2d");
+
+
+// style and color of flags 
+pincel.fillStyle =("yellow");
+pincel.fillRect(0,0,600,500);
+
+pincel.fillStyle =("blue");
+pincel.fillRect(0,170,600,500);
+
+pincel.fillStyle =("red");
+pincel.fillRect(0,340,600,500);
+
+//style and color of triangle
+pincel.fillStyle =("white");
+pincel.beginPath();
+pincel.moveTo(300,295);
+pincel.lineTo(180,420);
+pincel.lineTo(420,420);
+pincel.fill();
+
+//style and color of circle with the radius 
+pincel.fillStyle =("white");
+pincel.beginPath();
+pincel.arc(300,240,55,0,2*3.14);
+pincel.fill()
+
+
+
+
+
+
+
+
+</script>
